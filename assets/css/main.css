@@ -1,0 +1,682 @@
+/*
+-----------------------------
+|| Code by Ricardo Arévalo ||
+-----------------------------
+*/
+:root {
+    --primary-color: #121235;
+    --secondary-color: #3510A6;
+    --highlight-color: #49F2A0;
+    --light-gray-color: #eeeeee;
+    --general-text-color: #606060;
+    --light-text-color: #B3B3B3;
+
+    --font-12px: 0.750em;
+    --font-14px: 0.875em;
+    --font-18px: 1.125em;
+    --font-20px: 1.250em;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: var(--general-text-color);
+}
+ul.bulletList li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+ul.bulletList li:before {
+    content: '•';
+    position: absolute;
+    margin-left: -25px;
+    margin-top: -8px;
+    font-size: 1.7em;
+    color: var(--highlight-color);
+}
+h1 {
+    color: var(--primary-color);
+}
+.contentBody {
+    padding-bottom: 50px;
+}
+.bgPrimary {
+    background-color: var(--primary-color);
+}
+.bgHighlight {
+    background-color: var(--highlight-color) !important;
+    background-color: var(--highlight-color) !important;
+}
+/* HEADER */
+
+.headerBar {
+    position: relative;
+    padding: 0;
+    transition: all 1s ease;
+}
+.headerBar .ricardo-logo-w,
+.headerBar .ricardo-logo {
+    margin: 8px 0 10px 0;
+    display: none;
+}
+
+ul.menuBar {
+    padding: 0px;
+    margin: 10px 0;
+}
+.menuBar a {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all .2s ease;
+}
+.menuBar a:hover {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 3px;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: var(--highlight-color) !important;
+}
+.menuBar li a.lingo {
+    font-size: 1.2em;
+    margin-left: 16px;
+    margin-top: 6px;
+    font-weight: bold;
+    border-left: 1px solid var(--primary-color);
+    padding: 3px 11px 3px 20px !important;
+    line-height: 1em;
+    opacity: 0.5;
+    border-bottom: none;
+    transition: all .5s ease;
+}
+.menuBar li a.lingo:hover {
+    opacity: 1;
+}
+header {
+    transition: margin-top .5s ease-in-out;
+}
+header.colorBar {
+    margin-top: 0px;
+    position: relative;
+    background-color: var(--primary-color) !important;
+}
+header.fixedHeader.colorBar {
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+header.fixedHeader {
+    margin-top: 115px;
+    position: fixed;
+    background-color: var(--primary-color) !important;
+    width: 100vw;
+    z-index: 500;
+}
+header.colorBar nav,
+header.fixedHeader nav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+header.colorBar .ricardo-logo,
+header.colorBar .ricardo-logo-w,
+header.fixedHeader .ricardo-logo-w,
+header.fixedHeader .ricardo-logo {
+    margin: 0px 0 0px 0;
+}
+header.colorBar .ricardo-logo {
+    display: none !important;
+}
+header.colorBar .ricardo-logo-w {
+    display: block !important;
+}
+header.colorBar .menuBar a,
+header.fixedHeader .menuBar a {
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+header.colorBar .menuBar a:hover,
+header.fixedHeader .menuBar a:hover {
+    color: var(--highlight-color) !important;
+}
+header.colorBar .menuBar li a.lingo,
+header.fixedHeader .menuBar li a.lingo {
+    border-color: white !important;
+}
+.showLogo {
+    display: block !important;
+}
+/* Responsive Navbar*/
+
+/* HOME BANNER */
+#bannerHome {
+    z-index: -10;
+    height: 100vh;
+    overflow: hidden;
+    transition: all .5s ease-in;
+    margin-top: -115px;
+}
+#bannerHome .carousel-item { /*Controla la velocidad del carousel*/
+    transition: transform 5s ease, opacity 5s ease-out;
+}
+#bannerHome .staticCaption {
+    bottom: 50px;
+    text-align: left;
+    width: 35vw;
+    left: 15vw;
+    color: var(--primary-color);
+}
+#bannerHome .staticCaption h1{
+    font-size: 2em;
+}
+#bannerHome .staticCaption hr {
+    width: 7%;
+    border-top: 2px solid;
+    float: left;
+    clear: both;
+}
+#bannerHome .staticCaption p{
+    font-size: var(--font-18px);
+    clear: both;
+}
+/* Responsive Home Banner*/
+@media (max-width: 991px) {
+    header .mobileLogo {
+        display: none !important;
+    }
+    header.fixedHeader {
+        margin-top: 0px;
+        position: fixed;
+        background-color: var(--primary-color) !important;
+        width: 100vw;
+        z-index: 500;
+    }
+    header.fixedHeader button {
+        color: white !important;
+        margin: -41px 15px 0 9px !important
+    }
+    header.fixedHeader span {
+        color: white !important;
+    }
+    header.fixedHeader .showLogo {
+        display: none !important;
+    }
+    header.fixedHeader .mobileLogo {
+        display: block !important;
+    }
+    header.fixedHeader .headerBar .navbar-brand img {
+        margin: 8px 0 3px 0;
+        max-width: 90%;
+    }
+    .headerBar .navbar {
+        padding: 0;
+    }
+    .headerBar .navbar-brand {
+        padding: 0;
+        margin: 0;
+    }
+    .headerBar .navbar-brand img {
+        margin: 10px 0 5px 0;
+        max-width: 70%;
+    }
+    .headerBar button{
+        padding: 0 !important;
+        margin: -45px 15px 0 0px !important;
+        right: 0;
+        position: absolute;
+        top: 0;
+        color: var(--secondary-color) !important;
+        font-size: 1.9em;
+        border: none !important;
+    }
+    .headerBar .navbar-collapse {
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        z-index: 20;
+        left:0;
+        padding-bottom: 10px;
+        color: white;
+        border-bottom: 2px solid var(--primary-color);
+        border-top: 1px dashed #eee;
+    }
+    .menuBar li a.lingo {
+        padding: 0 !important;
+        margin-left: 0 !important;
+        border: none;
+    }
+    .projects .textProject {
+        padding-left: 0px !important;
+        margin-top: 30px !important;
+        max-width: 100% !important;
+    }
+    .projects .textProject h3 {
+        font-size: 1.3em !important;
+        margin-bottom: 20px !important;
+    }
+    .projects .gridProjects .textProject {
+        margin-top: 0px !important;
+        padding: 20px 20px !important
+    }
+
+}
+@media (max-width: 769px) {
+   
+    #bannerHome {
+        top: 0;
+        margin-top: 0;
+    }
+    
+    #bannerHome .staticCaption {
+    bottom: 30%;
+    width: 100%;
+    left: 0px;
+    padding: 20px 80px 20px 40px;
+    color: var(--primary-color);
+    }
+}
+@media (max-width: 500px) {
+    
+    #bannerHome {
+        top: 0;
+        margin-top: 0;
+        height: 400px;
+    }
+    #bannerHome .staticCaption {
+        bottom: 50px;
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+    }
+    #bannerHome .staticCaption h1 {
+        font-size: 1.3em;
+    }
+    #bannerHome .carousel-item{
+        width: 200%;
+        margin-left: -200px;
+    }
+}
+/* HOME PROJECTS */
+.headerProjects {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.headerProjects h5 {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+.headerProjects i {
+    position: absolute;
+    margin-left: -6px;
+    color: var(--highlight-color);
+    animation-name: floatingArrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -moz-animation-name: floatingArrow; /* Animación flotante de la Flechita*/
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+}
+@keyframes floatingArrow {
+    0% {margin-top: 5px;}
+    50% {margin-top: 15px;}
+    100% {margin-top: 5px;}
+}
+@-moz-keyframes floatingArrow {
+    0% {margin-top: 5px;}
+    50% {margin-top: 15px;}
+    100% {margin-top: 5px;}
+}
+.projects {
+    width: 100%;
+}
+.projects article {
+    margin-bottom: 1px;
+    background: #fff;
+    vertical-align: center;
+}
+.projects article div div {
+    background-color: #fcfcfc;
+}
+.projects article.mainProjects>div{
+    height: 455px;
+}
+.projects .textProject {
+    padding-left: 100px;
+    margin-top: 150px;
+    max-width: 80%;
+}
+.projects .textProject h3{
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.7em;
+    margin-bottom: 0;
+}
+.projects .textProject p{ 
+    font-style: italic;
+    margin-bottom: 3px;
+}
+.projects .textProject a {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    border-radius: 3px;
+    padding: 4px 13px 6px 13px;
+    margin-top: 11px;
+    display: inline-block;
+    transition: all .5s ease;
+}
+.projects .textProject a:hover {
+    text-decoration: none;
+}
+.projects .textProject a i {
+    margin-left: 3px;
+}
+.projects .img-project-1 {
+    background-image: url(../images/componentes-canvas.jpg);
+    background-size: cover;
+}
+.projects .img-project-2 {
+    background-image: url(../images/unicef-brasil.jpg);
+    background-size: cover;
+}
+.projects.mainProjects{
+        display: none;
+    }
+/* Responsive Main Projects */
+@media (max-width: 991px) {
+.projects.mainProjects>div{
+    height: auto;
+    }
+    .projects.mainProjects .textProject{
+        margin-bottom: 30px;
+    }
+}
+/* Grid Projects */
+.projects .gridProjects .itemProject {
+    border: 1px solid var(--light-gray-color);
+    background: white;
+    padding: 0px  !important;
+    transition: all .5s ease-out;
+}
+.projects .gridProjects .itemProject:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 20;
+    margin-top: -15px;
+    border: 1px solid var(--highlight-color);
+}
+.projects .gridProjects .img-project {
+    height: auto !important;
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+    filter: grayscale(.1)
+}
+.projects .gridProjects .textProject {
+    padding: 20px 40px 40px 40px !important;
+    margin-top: 10px;
+    max-width: 100%;
+}
+.projects article.gridProjects div div {
+       background-color: transparent;
+}
+.projects .gridProjects .textProject h3{
+    font-size: 1.5em;
+}
+.projects .gridProjects .textProject p{ 
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+a.linkStyle{ 
+    background-color: transparent !important;
+    padding: 0 !important;
+    color: var(--secondary-color) !important;
+    transition: all .6s;
+}
+a.linkStyle:hover{ 
+    padding: 0px 5px !important;
+    text-decoration: none;
+}
+/* Carousel */
+.carousel-indicators {
+    position: relative;
+    margin-top: 20px;
+}
+.carousel-indicators li {
+    background-color: var(--secondary-color);
+    width: 8px;
+    height: 5px;
+    border-radius: 3px;
+    border: none !important
+}
+.carousel-control-next, .carousel-control-prev {
+    color: var(--highlight-color);
+    opacity: 1;
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+/* Modal */
+.modal-dialog {
+    max-width: 80%;
+}
+.modal-content {
+    border: none !important;
+}
+/* Responsive Grid Projects */
+@media (max-width: 991px) {
+    .projects .gridProjects .img-project{
+        min-height: 100px !important;
+        height: 100px;
+    }
+}
+
+/* FOOTER */
+footer {
+    border-top: solid 4px;
+    border-color: var(--primary-color);
+    padding: 10px 0;
+    background-color: #eee;
+}
+.footerBar i.fas {
+    color: var(--primary-color);
+}
+.footerBar i>i.fas {
+    color: var(--highlight-color);
+}
+.footerBar a {
+    color: var(--general-text-color);
+}
+footer .redesSociales {
+    margin-top: 18px;
+}
+footer .redesSociales a {
+    font-size: 1.5em;
+    margin: 0 7px;
+}
+@media (max-width: 991px) {
+    .footerBar>div {
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+}
+/* PROYECTOS */
+.migas {
+    font-style: italic;
+    text-align: right;
+    padding-top: 45px;
+    color: var(--light-text-color);
+    font-size: var(--font-14px);
+}
+.titleContent {
+    color: var(--primary-color);
+}
+.titleContent h4{
+    margin-bottom: 0;
+    font-size:  var(--font-20px);
+}
+.titleContent h1 {
+    font-weight: 600;
+}
+.introContent {
+    margin: 40px 0 50px 0;
+}
+.introContent .rolBlock {
+    background-color: var(--highlight-color);
+    padding: 15px 30px;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+.introContent .rolBlock p{
+    margin: 0;
+}
+.introContent .rolBlock ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: var(--font-18px);
+}
+.introContent .intro {
+    border-left: 4px solid;
+    border-color: var(--highlight-color);
+    padding-left: 40px;
+}
+.spyBar {
+    position: relative;
+    transition: all 1s ease;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: italic;
+}
+.spyBar.fixedBar {
+    position: fixed;
+    top: 40px;
+    margin-top: 55px;
+}
+.spyBar .list-group-item {
+    border: none;
+    padding: 2px 10px;
+    margin: 10px 0;
+    display: inline-block;
+    color: var(--primary-color);
+    transition: all .3s ease;
+}
+.spyBar .list-group-item:hover {
+    background-color: var(--light-gray-color) !important;
+    border-radius: 3px;
+}
+.spyBar .list-group-item.active {
+    background-color: var(--secondary-color) !important;
+    border-radius: 3px;
+    color: white !important;
+}
+.projectContent article {
+    margin-bottom: 3em;
+}
+.projectContent h4 {
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+    vertical-align: middle;
+}
+.projectContent h4 i {
+    font-size: 1.9em;
+    vertical-align: middle;
+    position: relative;
+    margin-top: -6px;
+}
+
+.projectContent .toolBox {
+    margin-top: 20px;
+    font-size: var(--font-12px);
+}
+.projectContent .toolBox p {
+    float: left;
+    margin: 5px 10px 5px 0px;
+    vertical-align: middle;
+}
+.projectContent .toolBox ul {
+    padding: 0;
+    
+}
+.projectContent .toolBox ul li{
+    display: inline-block;
+    background-color: var(--light-gray-color);
+    padding: 2px 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+.ctaRegular {
+    background-color: var(--primary-color);
+    color: white;
+    transition: all .5s ease;
+    padding-top:.175rem;
+    padding-bottom:.175rem;
+}
+.ctaRegular:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+.ctaRegular i {
+    margin-left: 10px;
+}
+
+/* Contacto */
+.bgContact {
+    width: 100%;
+    background: url(../images/bgContact.jpg) no-repeat bottom;
+    background-size: cover;
+    min-height: 110vh;
+}
+.contactContent {
+    padding: 90px 0;
+}
+.contactContent h1 {
+    font-weight: 600;
+}
+.contactContent p{
+    margin: 0;
+    line-height: 1.2em;
+    font-style: italic;
+}
+.contactContent a{
+    margin: 0 10px;
+    min-width: 224px;
+}
+.linksContact {
+    margin: 35px 0px 80px 0px;
+}
+.linksContact h4 {
+ color: var(--primary-color);
+}
+.contactContent a.ctaRegular {
+    color: var(--primary-color);
+}
+.contactContent .inactive {
+    margin-top: 30px;
+    display: block;
+    background: white !important;
+    color: var(--primary-color) !important;
+    cursor: default !important;
+    font-weight: 400;
+}
+.contactContent p i {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    display: block;
+    color: var(--primary-color);
+}
+.redesSociales a {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+    transition: all .5s;
+}
+.redesSociales a:hover {
+    color: var(--primary-color);
+}
+/*
+-----------------------------
+|| Code by Ricardo Arévalo ||
+-----------------------------
+*/

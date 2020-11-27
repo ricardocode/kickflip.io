@@ -106,7 +106,7 @@ header.fixedHeader.colorBar {
 header.fixedHeader {
     margin-top: 115px;
     position: fixed;
-    background-color: var(--primary-color) !important;
+    background-color: rgba(18, 18, 53, 0.96) !important;
     width: 100vw;
     z-index: 500;
 }
@@ -184,7 +184,7 @@ header.fixedHeader .menuBar li a.lingo {
     header.fixedHeader {
         margin-top: 0px;
         position: fixed;
-        background-color: var(--primary-color) !important;
+        background-color: rgba(18, 18, 53, 0.96) !important;
         width: 100vw;
         z-index: 500;
     }

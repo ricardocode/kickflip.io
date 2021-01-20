@@ -1,0 +1,179 @@
+@import 'tools/_variables.scss';
+@import 'tools/_mixins.scss';
+
+body {
+    font-family: $font-stack-1;
+    font-size: $font-size-base;
+    color: var(--general-text-color);
+    
+}
+*::selection {
+    background: $color-brand-2;
+
+}
+h1, h2, h3, h4 {
+    font-family: $font-stack-2;
+    font-weight: 700;
+}
+
+ul.bulletList li {
+    list-style: none;
+    margin-bottom: 8px;
+
+    &:before {
+        content: '|';
+        position: absolute;
+        margin-left: -25px;
+        margin-top: -8px;
+        font-size: 1.7em;
+        color: $color-brand-2;
+    }
+}
+
+@import 'modules/_header.scss';
+@import 'modules/_footer.scss';
+
+
+.contentBody {
+    padding-bottom: 50px;
+}
+
+/* HOME BANNER */
+.bannerHome {
+    z-index: -10;
+    height: 100vh;
+    overflow: hidden;
+    transition: all .5s ease-in;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/banner/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    margin:100px 2% 2% 2%;
+
+    & .bannerHome__caption {
+        text-align: left;
+        width: 45vw;
+        left: 0;
+        color:  $color-brand-1;
+        background-color: $color-white;
+        padding: 4% 5% 4% 7%;
+
+        & h1{
+            font-size: 2.2em;
+            line-height: 2rem;
+        }
+        
+        & p{
+            font-size: 1.4em;
+            margin-bottom: 0px;
+            line-height: 1.8rem;
+            clear: both;
+        }
+    }
+}
+
+
+/* HOME PROJECTS */
+.headerProjects {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.headerProjects h5 {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: $color-brand-1;
+}
+
+.project {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    height: 380px;
+
+}
+
+.IMG__colpatria {
+    background: url(../images/colpatria.jpg) no-repeat center right;
+    background-size: cover;
+}
+.IMG__zav {
+    background: url(../images/zav.jpg) no-repeat center right;
+    background-size: cover;
+}
+.description {
+    width: 400px;
+    padding: 55px 30px 30px 35px;
+    height: 450px;
+}
+.description h2 {
+    font-size: 2em;
+}
+.description a {
+    border: 3px solid $color-brand-1;
+    color: $color-brand-1;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 8px 5px 8px;
+    margin-top: 5px;
+    display: inline-block;
+    transition: all .5s ease ;
+
+    &:hover {
+        background-color: $color-brand-2;;
+        text-decoration: none !important;
+    }
+}
+
+.description ul {
+    padding: 0px;
+    margin-top: 35px;
+
+    & li {
+        font-size: 12px;
+        float: left;
+        margin-right: 25px;
+
+        &:first-of-type {
+            list-style: none;
+        }
+    }
+}
+
+
+/* Carousel */
+.RDO-slider{
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
+}
+
+/* About */
+.RDO-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-top: 0px;
+    padding: 0% 7% 7% 10%;
+}
+.RDO-about__text {
+    & h2{
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+}
+.RDO-about__cta {
+    @extend .RDO-about__text;
+
+    & p{
+        font-size: 1.5rem;
+    }
+}
+
+
+/*
+-----------------------------
+|| Coded by Ricardo Arévalo ||
+-----------------------------
+*/

@@ -1,0 +1,82 @@
+/* HEADER */
+.headerBar {
+    position: relative;
+    padding: 0;
+    transition: all 1s ease;
+}
+
+.headerBar .ricardo-logo {
+    margin: 8px 0 10px 0;
+    opacity: 1;
+    width: 140px;
+    transition: all 1s ease;
+}
+
+.menuBar {
+    padding: 0px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    & a {
+        font-size: small;
+        text-decoration: none;
+        transition: all .2s ease;
+    }
+}
+
+.menuBar li a.lingo {
+    font-size: 1.2em;
+    margin-left: 16px;
+    margin-top: 6px;
+    font-weight: bold;
+    border-left: 1px solid $color-brand-1;
+    padding: 3px 11px 3px 20px !important;
+    line-height: 1em;
+    opacity: 0.5;
+    border-bottom: none;
+    transition: all .5s ease;
+}
+.menuBar li a.lingo:hover {
+    opacity: 1;
+}
+header {
+    transition: margin-top .5s ease-in-out;
+    margin-top: -80px;
+}
+
+header.fixedHeader {
+    position: fixed;   
+    width: 100vw;
+    z-index: 500;
+    transition: all 1s ease;
+}
+header.fixedHeader.header__color {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    margin-top: -100px;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .97) !important;;
+    }
+}
+header.fixedHeader nav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header.fixedHeader .ricardo-logo {
+    margin: 0px 0 0px 0;
+}
+header.colorBar .menuBar a,
+header.fixedHeader .menuBar a {
+    border-color: var(--primary-color) !important;
+}
+header.colorBar .menuBar a:hover,
+header.fixedHeader .menuBar a:hover {
+    color: var(--highlight-color) !important;
+}
+.showLogo {
+    opacity: .5 !important;
+    width: 100px !important;
+}

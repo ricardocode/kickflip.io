@@ -1,0 +1,20 @@
+/* FOOTER */
+footer {
+    border-color: var(--primary-color);
+    padding: 10px 0;
+    background-color: #eee;
+}
+
+.footerBar a {
+    color: var(--general-text-color);
+}
+.footerBar__info {
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .footerBar>div {
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+}

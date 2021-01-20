@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/* $Colors: Branding */
+/* $Colors: Complementary */
+/* $Fonts: Family & weights */
+/* $Fonts: Sizes */
+/* _Mixins */
+/* Responsive */
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 16px;
+  color: var(--general-text-color);
+}
+
+*::-moz-selection {
+  background: #acfff4;
+}
+
+*::selection {
+  background: #acfff4;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Georgia", cursive;
+  font-weight: 700;
+}
+
+ul.bulletList li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+ul.bulletList li:before {
+  content: '|';
+  position: absolute;
+  margin-left: -25px;
+  margin-top: -8px;
+  font-size: 1.7em;
+  color: #acfff4;
+}
+
+/* HEADER */
+.headerBar {
+  position: relative;
+  padding: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.headerBar .ricardo-logo {
+  margin: 8px 0 10px 0;
+  opacity: 1;
+  width: 140px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menuBar {
+  padding: 0px;
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.menuBar a {
+  font-size: small;
+  text-decoration: none;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.menuBar li a.lingo {
+  font-size: 1.2em;
+  margin-left: 16px;
+  margin-top: 6px;
+  font-weight: bold;
+  border-left: 1px solid #000000;
+  padding: 3px 11px 3px 20px !important;
+  line-height: 1em;
+  opacity: 0.5;
+  border-bottom: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.menuBar li a.lingo:hover {
+  opacity: 1;
+}
+
+header {
+  -webkit-transition: margin-top .5s ease-in-out;
+  transition: margin-top .5s ease-in-out;
+  margin-top: -80px;
+}
+
+header.fixedHeader {
+  position: fixed;
+  width: 100vw;
+  z-index: 500;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+header.fixedHeader.header__color {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  margin-top: -100px;
+}
+
+header.fixedHeader.header__color:hover {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+}
+
+header.fixedHeader nav {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+header.fixedHeader .ricardo-logo {
+  margin: 0px 0 0px 0;
+}
+
+header.colorBar .menuBar a,
+header.fixedHeader .menuBar a {
+  border-color: var(--primary-color) !important;
+}
+
+header.colorBar .menuBar a:hover,
+header.fixedHeader .menuBar a:hover {
+  color: var(--highlight-color) !important;
+}
+
+.showLogo {
+  opacity: .5 !important;
+  width: 100px !important;
+}
+
+/* FOOTER */
+footer {
+  border-color: var(--primary-color);
+  padding: 10px 0;
+  background-color: #eee;
+}
+
+.footerBar a {
+  color: var(--general-text-color);
+}
+
+.footerBar__info {
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .footerBar > div {
+    text-align: center !important;
+    margin-bottom: 20px;
+  }
+}
+
+.contentBody {
+  padding-bottom: 50px;
+}
+
+/* HOME BANNER */
+.bannerHome {
+  z-index: -10;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/banner/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 100px 2% 2% 2%;
+}
+
+.bannerHome .bannerHome__caption {
+  text-align: left;
+  width: 45vw;
+  left: 0;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 4% 5% 4% 7%;
+}
+
+.bannerHome .bannerHome__caption h1 {
+  font-size: 2.2em;
+  line-height: 2rem;
+}
+
+.bannerHome .bannerHome__caption p {
+  font-size: 1.4em;
+  margin-bottom: 0px;
+  line-height: 1.8rem;
+  clear: both;
+}
+
+/* HOME PROJECTS */
+.headerProjects {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.headerProjects h5 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  height: 380px;
+}
+
+.IMG__colpatria {
+  background: url(../images/colpatria.jpg) no-repeat center right;
+  background-size: cover;
+}
+
+.IMG__zav {
+  background: url(../images/zav.jpg) no-repeat center right;
+  background-size: cover;
+}
+
+.description {
+  width: 400px;
+  padding: 55px 30px 30px 35px;
+  height: 450px;
+}
+
+.description h2 {
+  font-size: 2em;
+}
+
+.description a {
+  border: 3px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 8px 5px 8px;
+  margin-top: 5px;
+  display: inline-block;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.description a:hover {
+  background-color: #acfff4;
+  text-decoration: none !important;
+}
+
+.description ul {
+  padding: 0px;
+  margin-top: 35px;
+}
+
+.description ul li {
+  font-size: 12px;
+  float: left;
+  margin-right: 25px;
+}
+
+.description ul li:first-of-type {
+  list-style: none;
+}
+
+/* Carousel */
+.RDO-slider {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
+}
+
+/* About */
+.RDO-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 0px;
+  padding: 0% 7% 7% 10%;
+}
+
+.RDO-about__text h2, .RDO-about__cta h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.RDO-about__cta p {
+  font-size: 1.5rem;
+}
+
+/*
+-----------------------------
+|| Coded by Ricardo Arévalo ||
+-----------------------------
+*/
+/*# sourceMappingURL=styles.css.map */

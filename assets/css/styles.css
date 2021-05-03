@@ -106,7 +106,7 @@ header.fixedHeader {
 }
 
 header.fixedHeader.header__color {
-  background-color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
   margin-top: -100px;
 }
 
@@ -140,6 +140,7 @@ header.fixedHeader .menuBar a:hover {
 
 /* FOOTER */
 footer {
+  margin-top: 100px;
   border-color: var(--primary-color);
   padding: 10px 0;
   background-color: #eee;
@@ -158,6 +159,85 @@ footer {
     text-align: center !important;
     margin-bottom: 20px;
   }
+}
+
+/* HOME PROJECTS */
+.headerProjects {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.headerProjects h5 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+.project {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.project__description {
+  margin-top: 50px;
+  padding-right: 50px;
+}
+
+.project__description h2 {
+  font-size: 16px x 2;
+}
+
+.project__description a {
+  border: 3px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 8px 5px 8px;
+  margin-top: 5px;
+  display: inline-block;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  text-decoration: none;
+}
+
+.project__description a:hover {
+  background-color: #acfff4;
+  text-decoration: none !important;
+}
+
+.project__description p {
+  font-size: 14px;
+}
+
+.project__description ul {
+  padding: 0px;
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project__description ul li {
+  font-size: 12px;
+  margin: 5px;
+  list-style: none;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: aliceblue;
+}
+
+/* Carousel */
+.RDO-slider {
+  border: 1px solid #e6e6e6;
+  /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05); */
+  border-radius: 5px;
 }
 
 .contentBody {
@@ -202,87 +282,6 @@ footer {
   margin-bottom: 0px;
   line-height: 1.8rem;
   clear: both;
-}
-
-/* HOME PROJECTS */
-.headerProjects {
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-
-.headerProjects h5 {
-  font-weight: 400;
-  font-size: 1.5em;
-  color: #000000;
-}
-
-.project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  height: 380px;
-}
-
-.IMG__colpatria {
-  background: url(../images/colpatria.jpg) no-repeat center right;
-  background-size: cover;
-}
-
-.IMG__zav {
-  background: url(../images/zav.jpg) no-repeat center right;
-  background-size: cover;
-}
-
-.description {
-  width: 400px;
-  padding: 55px 30px 30px 35px;
-  height: 450px;
-}
-
-.description h2 {
-  font-size: 2em;
-}
-
-.description a {
-  border: 3px solid #000000;
-  color: #000000;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 8px 8px 5px 8px;
-  margin-top: 5px;
-  display: inline-block;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-}
-
-.description a:hover {
-  background-color: #acfff4;
-  text-decoration: none !important;
-}
-
-.description ul {
-  padding: 0px;
-  margin-top: 35px;
-}
-
-.description ul li {
-  font-size: 12px;
-  float: left;
-  margin-right: 25px;
-}
-
-.description ul li:first-of-type {
-  list-style: none;
-}
-
-/* Carousel */
-.RDO-slider {
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
 }
 
 /* About */

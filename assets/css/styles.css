@@ -260,7 +260,7 @@ footer {
   background-image: url(../images/banner/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
   background-size: cover;
   background-position: center;
-  margin: 100px 2% 2% 2%;
+  margin: 100px 2% 0 2%;
 }
 
 .bannerHome .bannerHome__caption {
@@ -293,13 +293,18 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 0px;
-  padding: 0% 7% 7% 10%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.RDO-about__text, .RDO-about__cta {
+  border: 5px solid #212121;
+  margin: 50px 20px 20px 0px;
+  padding: 2.5%;
 }
 
 .RDO-about__text h2, .RDO-about__cta h2 {
@@ -307,7 +312,18 @@ footer {
   margin-bottom: 15px;
 }
 
+.RDO-about__text p, .RDO-about__cta p {
+  font-size: 21px;
+}
+
+.RDO-about__cta {
+  margin: 150px 0px 20px 20px;
+  width: 500px;
+  background-color: #ffacac;
+}
+
 .RDO-about__cta p {
+  font-weight: bold;
   font-size: 1.5rem;
 }
 

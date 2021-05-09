@@ -50,7 +50,7 @@ ul.bulletList li {
     background-image: url(../images/banner/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    margin:100px 2% 2% 2%;
+    margin:100px 2% 0 2%;
 
     & .bannerHome__caption {
         text-align: left;
@@ -78,21 +78,31 @@ ul.bulletList li {
 .RDO-about {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    align-content: center;
-    margin-top: 0px;
-    padding: 0% 7% 7% 10%;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 .RDO-about__text {
+    border: 5px solid $color-darker-gray;
+    margin: 50px 20px 20px 0px;
+    padding: 2.5%;
     & h2{
         font-size: 3rem;
         margin-bottom: 15px;
     }
+    & p {
+        font-size: $font-size-base + 5; 
+    }
 }
 .RDO-about__cta {
+    margin: 150px 0px 20px 20px;
+    width: 500px;
+    background-color: $color-comp-1;
+
     @extend .RDO-about__text;
 
     & p{
+        font-weight: bold;
         font-size: 1.5rem;
     }
 }
